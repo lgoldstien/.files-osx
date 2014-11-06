@@ -1,0 +1,19 @@
+###
+# .files-osx
+#
+# Sourcing file for inclusion in .bashrc / .bash_profile
+#
+# @author Lawrence Goldstien
+###
+
+# Internal strings
+source strings.sh
+
+# Environment Variables
+source environment.sh
+
+# Aliases
+source aliases.sh
+
+# Commands
+source commands.sh

@@ -10,4 +10,5 @@
 alias ll='ls -alG'
 alias la='ls -alC'
 
-# Command aliases:
+# Command aliases: CD
+alias cd="workspace_cd"

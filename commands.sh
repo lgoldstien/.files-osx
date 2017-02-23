@@ -14,12 +14,19 @@ function pathset {
     fi
 }
 
-# Use the updated ps1 command line if we have powerline-shell
-function _update_ps1() {
-    export PS1="$(~/.powerline-shell/powerline-shell.py $? 2> /dev/null)"
-}
-
 # If there is a .workspace file in the directory you have cd'd into then source it
-function workspace_cd() {
-    cd $@ && [ -f ".workspace" ] && source .workspace
+# function workspace_cd() {
+#     cd $@ && [ -f ".workspace" ] && source .workspace
+# }
+
+
+# Set up the chained ssh command
+function chain-ssh {
+    CHAIN_HOSTS=( "$@" );
+    for i in "${CHAIN_HOSTS[@]}"; do
+       echo $i
+    done
+
+
+    # ssh tribepad-jump -t "command; ssh test-www1 -t 'bash'"
 }
